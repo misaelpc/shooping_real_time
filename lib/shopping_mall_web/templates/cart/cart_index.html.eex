@@ -1,0 +1,5 @@
+Items: <%= @cart.count %>
+<%=form_for @conn, Routes.cart_path(@conn, :update), method: "post"%>
+<%= submit "+", name: "action", value: "add" %>
+<%= submit "-", name: "action", value: "subtract" %>
+</form>
